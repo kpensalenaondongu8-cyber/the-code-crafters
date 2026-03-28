@@ -1,0 +1,30 @@
+package main
+
+import "strings"
+
+func Tokenize(text string) []string {
+	words := strings.Fields(text)
+	var tokens []string
+
+	for i := 0; i < len(words); i++ {
+
+		// If word starts with "(" but doesn't end with ")"
+		if strings.HasPrefix(words[i], "(") && !strings.HasSuffix(words[i], ")") {
+
+			combined := words[i]
+
+			// Keep adding words until we find one that ends with ")"
+			for i+1 < len(words) && !strings.HasSuffix(words[i], ")") {
+				i++
+				combined += " " + words[i]
+			}
+
+			tokens = append(tokens, combined)
+
+		} else {
+			tokens = append(tokens, words[i])
+		}
+	}
+
+	return tokens
+}
