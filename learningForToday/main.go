@@ -1574,3 +1574,98 @@ func replaceIndex(s string, n int) string {
 	s = s[:n] + s[n+1:]
 	return s
 }
+// func main() {
+// 	fmt.Println(punc("Punctuation tests are ... kinda boring ,what do you think ???"))
+// }
+
+// 	words := strings.Fields(word)
+// 	new := []string{}
+// 	for x := 0; x < len(words); x++ {
+// 		if len(new) > 0 && strings.ContainsAny(words[x][len(words[x])-3:], ",.!;?") {
+// 			new = append(new, words[x][:1], words[x][1:])
+// 		} else if len(new) > 0 && strings.ContainsAny(words[x][:1], ",.!;?") {
+// 			new = append(new, words[x][:len(words[x])-3], words[x][len(words[x])-3:])
+// 		} else {
+// 			new = append(new, words[x])
+// 		}
+// 	}
+
+// 	fixWord := []string{}
+
+// 	for i := 0; i < len(new); i++ {
+// 		if len(fixWord) > 0 && strings.ContainsAny(new[i], ",.!;?") {
+// 			fixWord[len(fixWord)-1] += new[i]
+// 		} else {
+// 			fixWord = append(fixWord, new[i])
+// 		}
+// 	}
+// 	return strings.Join(fixWord, " ")
+// }
+/ package main
+
+// import (
+// 	"fmt"
+// 	"regexp"
+// )
+
+// func extractURLs(input string) []string {
+
+// 	pattern := regexp.MustCompile(`https?://\S+|www\.\S+`)
+// 	return pattern.FindAllString(input, -1)
+// }
+
+// func main() {
+// 	input := `You can find me on https://www.google.com https://www.facebook.com www.twitter.com`
+// 	urls := extractURLs(input)
+// 	for _, url := range urls {
+// 		fmt.Println(url)
+// 	}
+// }
+
+// package main
+
+// import (
+// 	"fmt"
+// 	"regexp"
+// )
+
+// func main() {
+// 	pattern := regexp.MustCompile("Northern")
+// 	text := "New York is in the Northern part of the United States."
+
+//		if pattern.MatchString(text) {
+//			fmt.Println("Correct region!")
+//		} else {
+//			fmt.Println("Wrong region!")
+//		}
+//	}
+// package main
+
+// import (
+// 	"fmt"
+// 	"regexp"
+// )
+
+// func main() {
+// 	text := "Apples are delicious, but so are apples, aPpleS, and APPlE."
+
+//		pattern := regexp.MustCompile(`(?i)apple`)
+//		appleMatches := pattern.FindAllString(text, -1)
+//		fmt.Println("Case-insensitive matches for 'apple':", appleMatches)
+//	}
+// package main
+
+// import (
+// 	"fmt"
+// 	"regexp"
+// )
+
+// func main() {
+// 	text := "Hello, how are you?"
+
+// 	pattern := regexp.MustCompile(`[^aeiouAEIOU\s]`)
+// 	matches := pattern.FindAllString(text, -1)
+
+// 	fmt.Println(matches)
+// }
+
